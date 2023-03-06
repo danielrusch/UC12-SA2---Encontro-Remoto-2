@@ -12,7 +12,7 @@ namespace Encontro_Remoto_2.Classes
 
         public float rendimento {get; set;}
 
-        public string? endereco {get; set;}
+        public Enderecoo? endereco {get; set;}
 
         public abstract float CalcularImposto (float rendimento);
 

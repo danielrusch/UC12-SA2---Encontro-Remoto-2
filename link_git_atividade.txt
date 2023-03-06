@@ -1,1 +1,3 @@
 https://github.com/danielrusch/UC12-SA2---Encontro-Remoto-2
+
+Existe um Commit sobre a atividade online 3
