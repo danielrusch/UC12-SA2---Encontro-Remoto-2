@@ -45,3 +45,12 @@ Console.WriteLine($"PESSOA JURÍDICA -----------------------------");
 float impostoPagar = novaPj.CalcularImposto(2000.5f);
 Console.WriteLine($"R$ {impostoPagar:0.00}");
 Console.WriteLine($"{impostoPagar.ToString("C")}");
+
+novaPj.Cnpj = "12.436.564/00015-05";
+
+Console.WriteLine(@$"
+CNPJ: {novaPj.Cnpj}
+Valido: {novaPj.ValidarCnpj(novaPj.Cnpj)}
+");
+
+

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Encontro_Remoto_2.Interfaces;
 
@@ -36,8 +37,30 @@ namespace Encontro_Remoto_2.Classes
             }
 
         public bool ValidarCnpj(string Cnpj)
+
         {
-            throw new NotImplementedException();
+          bool retornoCnpjValido = Regex.IsMatch (Cnpj, @"^(\d{14}) | (\d{2}.\d{3}.\d{3}\d{4}-\d{2}}) $");
+
+          if (retornoCnpjValido) 
+          {
+            string substringCnpj14 = Cnpj.Substring(8,4); // depois de quantos caracteres defino quantos eu quero analisar
+
+            if (substringCnpj14 == "0001" )
+
+            {
+                return true;
+            }
+          }
+
+          string substringCnpj18 = Cnpj.Substring(11,4);
+
+           if (substringCnpj18 == "0001" )
+
+            {
+                return true;
+            }
+            
+            return false;
         }
     }
 }
